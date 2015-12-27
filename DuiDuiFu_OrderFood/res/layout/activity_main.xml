@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="@dimen/home_tab_width"
+        android:background="#E4543C" >
+
+        <ImageView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo1" />
+
+        <TextView
+            android:id="@+id/tv_frag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="收银台"
+            android:textColor="@color/white"
+            android:textSize="28sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_account"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/radiogroup"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radio_account_leftselector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="提现管理"
+                android:textColor="@color/radio_account_selctor" />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/radio_account_rightselector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="账户管理"
+                android:textColor="@color/radio_account_selctor" />
+        </RadioGroup>
+        <LinearLayout 
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:id="@+id/ll_typeadd"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="15dp"
+            >
+            <TextView 
+                android:text="添加商品分类"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                />
+            <ImageView 
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_attribute_add"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/home_tab_width"
+        android:layout_marginTop="80dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_main_tab"
+        android:layout_width="@dimen/home_tab_width"
+        android:layout_height="match_parent"
+        android:background="#343434"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btn_main_home"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_manu_home" />
+
+        <Button
+            android:id="@+id/btn_main_cash"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_manu_cashier" />
+
+        <Button
+            android:id="@+id/btn_main_order"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_manu_order" />
+
+        <Button
+            android:id="@+id/btn_main_goods"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_manu_goods" />
+
+        <Button
+            android:id="@+id/btn_main_member"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_manu_member" />
+
+        <Button
+            android:id="@+id/btn_main_function"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_manu_function" />
+
+        <Button
+            android:id="@+id/btn_main_account"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_manu_account" />
+
+        <Button
+            android:id="@+id/btn_main_kitchen"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/icon_manu_cook" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_progress_dialog" />
+
+</RelativeLayout>

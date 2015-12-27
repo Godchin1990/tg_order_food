@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pos.app.main"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    android:orientation="vertical" 
+    xmlns:app1="http://schemas.android.com/apk/res/com.pos.orderfood">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="85dp" >
+	 
+        <RadioGroup
+            android:id="@+id/rg_member"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/title_left_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_member1"
+                style="@style/radio_button_big_text"
+                android:layout_width="@dimen/radio_text_big_width"
+                android:layout_height="@dimen/radio_text_big_width"
+                android:button="@null"
+                android:checked="true"
+                android:text="所有会员" />
+
+            <RadioButton
+                android:id="@+id/rb_member2"
+                style="@style/radio_button_big_text"
+                android:layout_width="@dimen/radio_text_big_width"
+                android:layout_height="@dimen/radio_text_big_width"
+                android:button="@null"
+                android:text="金牌会员" />
+
+            <RadioButton
+                android:id="@+id/rb_member3"
+                style="@style/radio_button_big_text"
+                android:layout_width="@dimen/radio_text_big_width"
+                android:layout_height="@dimen/radio_text_big_width"
+                android:button="@null"
+                android:text="银牌会员" />
+
+            <RadioButton
+                android:id="@+id/rb_member4"
+                style="@style/radio_button_big_text"
+                android:layout_width="@dimen/radio_text_big_width"
+                android:layout_height="@dimen/radio_text_big_width"
+                android:button="@null"
+                android:text="普通会员" />
+        </RadioGroup>
+      
+		 
+        <com.pos.orderfood.widget.UnderlinePageIndicator
+            android:id="@+id/indicator_member"
+            android:layout_width="@dimen/four_radio_text_big_width"
+            android:layout_height="4dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/title_left_margin"
+           	app1:fades="false"
+            app1:selectedColor="@color/orange"
+             />
+ 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@color/gray" />
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_member"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
